@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="ListViewExamples.Views.MainPage" 
+				xmlns:views="using:ListViewExamples.Views"
+				Title="ListView Examples">
+    <ContentPage.Padding>
+	    <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">10,20,10,5</On>
+            <On Platform="Android">10,0,10,5</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+	<TableView Intent="Menu">
+		<TableView.Root>
+			<TableSection Title="Select an example">
+                <TextCell Text="Bind to List of Strings" Tapped="navigateToPage" CommandParameter="{x:Type views:ListViewStrings}" />
+                <TextCell Text="Bind to a Data Model" Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewDataModel}" />
+                <TextCell Text="Add Image"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewImageCell}" />
+                <TextCell Text="Customize ListView"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewCustom}" />
+                <TextCell Text="Customize with Image"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewCustomWithImage}"  />
+                <TextCell Text="Customize with Button"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewButton}"/>
+                <TextCell Text="Add ContextAction"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewContextAction}"/>
+                <TextCell Text="Grouping Headers"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewGrouped}"/>
+                <TextCell Text="Grouping Headers using Linq"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewGroupedLinq}"/>
+                <TextCell Text="Scroll the List"  Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewScroll}" />
+                <TextCell Text="Optimize Performance"   Tapped="navigateToPage"  CommandParameter="{x:Type views:ListViewPerformance}"/>
+			</TableSection>
+		</TableView.Root>
+	</TableView>
+</ContentPage>
