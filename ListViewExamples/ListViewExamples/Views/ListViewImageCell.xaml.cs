@@ -7,16 +7,19 @@ namespace ListViewExamples.Views
 {
     public partial class ListViewImageCell : ContentPage
     {
+        public List<ListItem> Items { get; }
         public ListViewImageCell()
         {
             InitializeComponent();
-            List<ListItem> ListItems = new List<ListItem>
+            Items = new List<ListItem>
             {
                 new ListItem {Source = "first.png", Title = "First", Description="1st item"},
                 new ListItem {Source = "second.png", Title = "Second", Description="2nd item"},
                 new ListItem {Source = "third.png", Title = "Third", Description="3rd item"}
             };
-            ImageList.ItemsSource = ListItems;
+
+            //ImageList.ItemsSource = Items;
+            BindingContext = this;
         }
 
         async void ListViewItemTapped(object sender, ItemTappedEventArgs e)

@@ -9,18 +9,19 @@ namespace ListViewExamples.Views
 {
     public partial class ListViewStrings : ContentPage
     {
+        public List<string> Items { get; }
         public ListViewStrings()
         {
             InitializeComponent();
-            List<string> Items = new List<string>
+            Items = new List<string>
             {
                 "First",
                 "Second",
                 "Third"
             };
-            BindingContext = Items;
+            BindingContext = this;
         }
-
+ 
         async void ListViewItemTapped (object sender, ItemTappedEventArgs e)
         {
             string item = (string)e.Item;

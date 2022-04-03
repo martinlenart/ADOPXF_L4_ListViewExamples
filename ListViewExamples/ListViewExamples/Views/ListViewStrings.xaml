@@ -7,7 +7,7 @@
         </OnPlatform>
     </ContentPage.Padding>
     <StackLayout>
-        <ListView  ItemsSource="{Binding .}" ItemTapped="ListViewItemTapped"/>
+        <ListView  ItemsSource="{Binding Items}" ItemTapped="ListViewItemTapped"/>
         <!-- <ListView ItemsSource="{Binding Items}" ItemSelected="ListViewItemSelected"/> -->
     </StackLayout>
 </ContentPage>

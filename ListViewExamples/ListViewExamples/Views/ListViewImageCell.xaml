@@ -6,7 +6,7 @@
             <On Platform="Android">10,0,10,5</On>
         </OnPlatform>
     </ContentPage.Padding>
-    <ListView x:Name="ImageList" ItemTapped="ListViewItemTapped">
+    <ListView x:Name="ImageList" ItemsSource="{Binding Items}" ItemTapped="ListViewItemTapped">
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<ImageCell ImageSource="{Binding Source}" Text="{Binding Title}" Detail="{Binding Description}"/>

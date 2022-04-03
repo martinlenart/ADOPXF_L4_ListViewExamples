@@ -18,7 +18,7 @@ namespace ListViewExamples.Views
             InitializeComponent();
 
             var items = new RectangleModel().Rectangles;
-            var groupedList = items.OrderByDescending(r => r.Area).GroupBy(r => r.Color, r => r);
+            var groupedList = items.OrderByDescending(r => r.Area).GroupBy(r => r.Area, r => r);
 
             CustomGroupedList.ItemsSource = groupedList;
         }

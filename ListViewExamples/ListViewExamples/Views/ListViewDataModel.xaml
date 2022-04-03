@@ -6,7 +6,7 @@
             <On Platform="Android">10,0,10,5</On>
         </OnPlatform>
     </ContentPage.Padding>
-    <ListView x:Name="DataModelList" ItemTapped="ListViewItemTapped" >
+    <ListView x:Name="DataModelList" ItemsSource="{Binding Items}" ItemTapped="ListViewItemTapped" >
 		<ListView.ItemTemplate>
 			<DataTemplate>
 				<TextCell Text="{Binding Title}" Detail="{Binding Description}"/>

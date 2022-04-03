@@ -35,17 +35,17 @@ namespace ListViewExamples.Views
 
             readonly Func<string, string, string, Task> displayAlertAction;
 
-            List<ListItem> listItems;
-            public List<ListItem> ListItems
+            List<ListItem> _items;
+            public List<ListItem> Items
             {
                 get
                 {
-                    return listItems;
+                    return _items;
                 }
                 set
                 {
-                    listItems = value;
-                    OnPropertyChanged("ListItems");
+                    _items = value;
+                    OnPropertyChanged("Items");
                 }
             }
 
@@ -53,7 +53,7 @@ namespace ListViewExamples.Views
             {
                 this.displayAlertAction = displayAlertAction;
 
-                ListItems = new List<ListItem> { 
+                Items = new List<ListItem> { 
                     new ListItem {Source = "first.png", Title = "First", Description="1st item", Price="$100.00"}, 
                     new ListItem {Source = "second.png", Title = "Second", Description="2nd item", Price="$200.00"},
                     new ListItem {Source = "third.png", Title = "Third", Description="3rd item", Price="$300.00"}
